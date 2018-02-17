@@ -34,7 +34,7 @@ namespace ParkingCalculation.Engine.Handler
             var lessThan24Hr = timeInOut.ExitDateTime.Subtract(timeInOut.EntryDateTime).Days < 1;
 
             if (entryDayCondition && exitDayCondition && lessThan24Hr && entryTimeCondition && exitTimeCondition) {
-                return new ParkingReceipt { ParkingName = ParkingName, ParkingPrice = ParkingRate } ;
+                return new ParkingReceipt { ParkingName = ParkingName, ParkingPrice = ParkingRate, Erred=false, RateType=RateType } ;
             }
             else{
                 return _nextRateHandler.GetParkingCharges(timeInOut.EntryDateTime,timeInOut.ExitDateTime);

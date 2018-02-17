@@ -15,18 +15,17 @@ namespace ParkingCalculation.Engine.Handler
 
         public override IParkingReceipt GetParkingCharges(DateTime entryDateAndTime, DateTime exitDateAndTime)
         {
-            double remainedHours = 0;
             var timeSpan = exitDateAndTime.Subtract(entryDateAndTime);
             if (timeSpan.Days > 0)
-                price= StandardParkingRate * timeSpan.Days;
-            if(timeSpan.Minutes<60)
-                remainedHours = 1;
-            remainedHours = timeSpan.TotalHours;
-            if (remainedHours > 3 && remainedHours <= 24)  price=price+ParkingRate;
-            if (remainedHours > 2 && remainedHours <= 3)  price = price + 15;
-            if (remainedHours > 1 && remainedHours <= 2)  price = price + 10;
-            if (remainedHours > 0 && remainedHours <= 1)  price = price + 5;
-            return new ParkingReceipt { ParkingName=standardRateName, ParkingPrice=price };
+            {
+                price = StandardParkingRate * timeSpan.Days;
+            }
+            
+            if (timeSpan.Hours > 3 && timeSpan.Hours <= 24)  price=price+ParkingRate;
+            if (timeSpan.Hours > 2 && timeSpan.Hours <= 3)  price = price + 15;
+            if (timeSpan.Hours > 1 && timeSpan.Hours <= 2)  price = price + 10;
+            if (timeSpan.Minutes > 0 && timeSpan.Minutes <= 59)  price = price + 5;
+            return new ParkingReceipt { ParkingName=standardRateName, ParkingPrice=price, RateType=standardType };
         }
     }
 }

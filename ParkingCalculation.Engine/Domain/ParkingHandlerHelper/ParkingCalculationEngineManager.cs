@@ -17,7 +17,7 @@ namespace ParkingCalculation.Engine
         }
         public IParkingReceipt GenerateParkingCharge(DateTime entry, DateTime exit)
         {
-            var receipt = new ParkingReceipt { ParkingName="No Charge", ParkingPrice=0 };
+            var receipt = new ParkingReceipt { ParkingName="No Charge", ParkingPrice=0, Erred=true, RateType=RateType.NONE };
             if (entry > DateTime.Now || exit>DateTime.Now || entry>=exit)
                 return receipt;
             return _IParkingRateHandlersSetting.Set.GetParkingCharges(entry,exit);

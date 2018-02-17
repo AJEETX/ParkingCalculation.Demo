@@ -3,15 +3,16 @@ using System.Collections.Generic;
 
 namespace ParkingCalculation.Engine.Model
 {
-    public enum RateType { EARLY,STANDARD,NITE,WEEKEND}
+    public enum RateType { NONE,EARLY,STANDARD,NITE,WEEKEND}
     public interface IParkingInOutDateAndTime { DateTime EntryDateTime { get; set; } DateTime ExitDateTime { get; set; } }
     public class ParkingInOutDateAndTime : IParkingInOutDateAndTime { public DateTime EntryDateTime { get; set; } public DateTime ExitDateTime { get; set; } }
-    public interface IParkingReceipt { string ParkingName { get; set; } Decimal ParkingPrice { get; set; } }
+    public interface IParkingReceipt { string ParkingName { get; set; } Decimal ParkingPrice { get; set; } RateType RateType { get; set; } }
     public class ParkingReceipt : IParkingReceipt
     {
         public string ParkingName { get ; set ; }
         public decimal ParkingPrice { get ; set ; }
         public bool Erred { get; set; }
+        public RateType RateType { get; set; }
     }
     public class ParkingInOutDateAndTimeDTO
     {
