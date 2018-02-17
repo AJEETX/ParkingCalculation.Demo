@@ -1,0 +1,30 @@
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ParkingCalculation.Engine.Handler;
+using ParkingCalculation.Engine.Model;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ParkingCalculation.Engine.Handler.Tests
+{
+    [TestClass()]
+    public class XandardRateHandlerTests
+    {
+        [TestMethod()]
+        public void XandardRateHandlerGetParkingChargesTest__Get_Correct_ParkingCharges()
+        {
+            //given
+            var rndm = new Random();
+
+            DateTime entry=DateTime.Now.AddDays(rndm.Next(50, 100)),exit= DateTime.Now.AddDays(rndm.Next(20));
+            var sut = new XandardRateHandler();
+
+            //when
+            var result = sut.GetParkingCharges(entry, exit);
+
+            Assert.IsInstanceOfType(result,typeof(IParkingReceipt));
+        }
+    }
+}
