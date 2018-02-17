@@ -31,21 +31,5 @@ namespace ParkingCalculation.Engine
             if (commenceTime < finishTime) return commenceTime <= theTime && theTime <= finishTime;
             return !(finishTime < theTime && theTime < commenceTime);
         }
-        public static DateTime ValidFormat(this string time)
-        {
-            string format = "d/M/yyyy H:m";
-            CultureInfo culture = CultureInfo.InvariantCulture;
-            DateTimeStyles styles = DateTimeStyles.None; DateTime timeOutput;
-            bool dateIsValid = DateTime.TryParseExact(time, format, culture, styles, out timeOutput);
-
-            return (dateIsValid)?timeOutput:DateTime.MinValue;
-        }
-        public static bool DateIsValid(this string time)
-        {
-            string format = "d/M/yyyy H:m";bool valid = true;
-            CultureInfo culture = CultureInfo.InvariantCulture;
-            DateTimeStyles styles = DateTimeStyles.None; DateTime timeOutput;
-            return valid=DateTime.TryParseExact(time, format, culture, styles, out timeOutput);
-        }
     }
 }
