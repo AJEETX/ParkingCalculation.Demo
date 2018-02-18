@@ -5,6 +5,7 @@ You can use the [editor on GitHub](https://github.com/AJEETX/ParkingCalculation.
 
 [![Build Status](http://inch-ci.org/github/AJEETX/ParkingCalculation.Demo.svg?branch=master)](http://inch-ci.org/github/AJEETX)
 
+[![Build Status](https://travis-ci.org/AJEETX/ParkingCalculation.Demo.png?branch=master)](https://travis-ci.org/AJEETX/ParkingCalculation.Demo)
 
 ### Support or Contact
 
