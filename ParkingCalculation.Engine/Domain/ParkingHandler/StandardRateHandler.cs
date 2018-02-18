@@ -9,15 +9,13 @@ namespace ParkingCalculation.Engine.Handler
         RateType standardType = RateType.STANDARD;
 
         protected override decimal ParkingRate { get { return StandardParkingRate; } }
-
         protected override string ParkingName{ get { return standardRateName; }}
         protected override RateType RateType { get { return standardType; } }
 
         public override IParkingReceipt GetParkingCharges(DateTime entryDateAndTime, DateTime exitDateAndTime)
         {
             var timeSpan = exitDateAndTime.Subtract(entryDateAndTime);
-            if (timeSpan.Days > 0)
-            {
+            if (timeSpan.Days > 0){
                 price = StandardParkingRate * timeSpan.Days;
             }
             

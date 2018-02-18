@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ParkingCalculation.Engine.Handler;
 
 namespace ParkingCalculation.Engine.Domain.ParkingHandlerHelper
@@ -18,13 +16,9 @@ namespace ParkingCalculation.Engine.Domain.ParkingHandlerHelper
             GetAll();
             return types;
         }
-        static void GetAll()
-        {
-            types = AppDomain.CurrentDomain.GetAssemblies()
-                .SelectMany(s => s.GetTypes().Where(t =>(typeof(ParkingRateHandler)).IsAssignableFrom(t)))
+        static void GetAll() => 
+            types = AppDomain.CurrentDomain.GetAssemblies().SelectMany(s => s.GetTypes().Where(t => (typeof(ParkingRateHandler)).IsAssignableFrom(t)))
                 .Where(u => !u.IsAbstract && u.IsSubclassOf(typeof(ParkingRateHandler)));
-
-        }
         static IEnumerable<Type> types;
     }
 }

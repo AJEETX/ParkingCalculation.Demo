@@ -11,7 +11,6 @@ namespace ParkingCalculation.Engine.Handler
         RateType niteType = RateType.NITE;
 
         protected override decimal ParkingRate { get { return NiteParkingRate; } }
-
         protected override string ParkingName { get { return niteRateName; } }
         protected override RateType RateType { get { return niteType; } }
 

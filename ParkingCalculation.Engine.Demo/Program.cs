@@ -1,6 +1,4 @@
 ﻿using System;
-using ParkingCalculation.Engine.Domain;
-using ParkingCalculation.Engine.Config;
 namespace ParkingCalculation.Demo
 {
     class Program
@@ -10,6 +8,5 @@ namespace ParkingCalculation.Demo
             Hook.Generate();
             Console.ReadLine();
         }
-        
     }
 }

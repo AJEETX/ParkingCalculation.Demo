@@ -28,6 +28,7 @@ namespace ParkingCalculation.Engine.Domain.ParkingHandlerHelper
             parkingRateHandler = new List<ParkingRateHandler>();
 
             foreach (var type in types) {
+
                 var handler = Activator.CreateInstance(type) as ParkingRateHandler;
 
                 if (handler == null) continue;

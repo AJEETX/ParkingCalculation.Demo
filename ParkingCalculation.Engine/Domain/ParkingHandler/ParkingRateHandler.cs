@@ -4,12 +4,7 @@ using ParkingCalculation.Engine.Model;
 
 namespace ParkingCalculation.Engine.Handler
 {
-    public interface IParkingRateHandler
-    {
-        IParkingReceipt GetParkingCharges(DateTime entryDateAndTime, DateTime exitDateAndTime);
-        void SetNextHandler(ParkingRateHandler nextHandler);
-    }
-    public abstract class ParkingRateHandler: IParkingRateHandler
+    public abstract class ParkingRateHandler
     {
         protected ParkingRateHandler _nextRateHandler;
         protected abstract Decimal ParkingRate { get;  }

@@ -17,23 +17,17 @@ namespace ParkingCalculation.Engine.Handler
         public override IParkingReceipt GetParkingCharges(DateTime entryDateAndTime, DateTime exitDateAndTime)
         {
             var parkingInOutDateAndTime = new ParkingInOutDateAndTime{
-                EntryDateTime = entryDateAndTime,
-                ExitDateTime = exitDateAndTime
+                EntryDateTime = entryDateAndTime,ExitDateTime = exitDateAndTime
             };
             var entryTimeFrame = new EntryTimeFrame{
-                EntryCommenceTime = entryCommenceTime,
-                EntryFinishTime = entryFinishTime
+                EntryCommenceTime = entryCommenceTime, EntryFinishTime = entryFinishTime
             };
             var exitTimeFrame = new ExitTimeFrame{
-                ExitCommenceTime = exitCommenceTime,
-                ExitFinishTime = exitFinishTime
+                ExitCommenceTime = exitCommenceTime, ExitFinishTime = exitFinishTime
             };
             var parkingInOutDateAndTimeDTO = new ParkingInOutDateAndTimeDTO{
-                EntryTimeFrame = entryTimeFrame,
-                ExitTimeFrame = exitTimeFrame,
-                ParkingInOutDateAndTime = parkingInOutDateAndTime,
-                ParkingRate = ParkingRate
-                ,DaysOfWeek = Extension.WeekEnds
+                EntryTimeFrame = entryTimeFrame, ExitTimeFrame = exitTimeFrame, ParkingInOutDateAndTime = parkingInOutDateAndTime,
+                ParkingRate = ParkingRate ,DaysOfWeek = Extension.WeekEnds
             }; return base.ProcessParkingRate(parkingInOutDateAndTimeDTO);
         }
     }

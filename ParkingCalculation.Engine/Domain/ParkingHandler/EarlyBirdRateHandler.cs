@@ -9,14 +9,15 @@ namespace ParkingCalculation.Engine.Handler
         TimeSpan exitCommenceTime = new TimeSpan(15, 30, 0), exitFinishTime = new TimeSpan(23, 30, 0); //
         Decimal EarlyBirdParkingRate = 13;string earlyBirdRateName = "Early Bird Rate";
         RateType earlyBirdType = RateType.EARLY;
-        protected override decimal ParkingRate { get { return EarlyBirdParkingRate; } }
 
+        protected override decimal ParkingRate { get { return EarlyBirdParkingRate; } }
         protected override string ParkingName { get { return earlyBirdRateName; } }
         protected override RateType RateType { get { return earlyBirdType; } }
 
         public override IParkingReceipt GetParkingCharges(DateTime entryDateAndTime, DateTime exitDateAndTime)
         {
-            var parkingInOutDateAndTime = new ParkingInOutDateAndTime{ EntryDateTime=entryDateAndTime, ExitDateTime=exitDateAndTime
+            var parkingInOutDateAndTime = new ParkingInOutDateAndTime{
+                EntryDateTime = entryDateAndTime, ExitDateTime= exitDateAndTime
             };
             var entryTimeFrame = new EntryTimeFrame{
                 EntryCommenceTime = entryCommenceTime, EntryFinishTime = entryFinishTime
@@ -25,8 +26,8 @@ namespace ParkingCalculation.Engine.Handler
                 ExitCommenceTime = exitCommenceTime, ExitFinishTime = exitFinishTime
             };
             var parkingInOutDateAndTimeDTO = new ParkingInOutDateAndTimeDTO {
-                EntryTimeFrame = entryTimeFrame,
-                ExitTimeFrame = exitTimeFrame, ParkingInOutDateAndTime=parkingInOutDateAndTime, ParkingRate= ParkingRate, DaysOfWeek=Extension.Weekdays
+                EntryTimeFrame = entryTimeFrame, ExitTimeFrame = exitTimeFrame, ParkingInOutDateAndTime=parkingInOutDateAndTime, ParkingRate= ParkingRate,
+                DaysOfWeek =Extension.Weekdays
             }; return base.ProcessParkingRate(parkingInOutDateAndTimeDTO);
         }
     }

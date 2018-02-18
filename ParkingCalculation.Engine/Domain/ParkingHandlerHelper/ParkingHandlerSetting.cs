@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 using ParkingCalculation.Engine.Domain.ParkingHandlerHelper;
 using ParkingCalculation.Engine.Handler;
-using ParkingCalculation.Engine.Model;
 
 namespace ParkingCalculation.Engine.Domain
 {
