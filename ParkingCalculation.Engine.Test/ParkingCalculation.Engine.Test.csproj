@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\ParkingChargeEngine\ParkingCalculationEngineManagerTests.cs" />
+    <Compile Include="Domain\ParkingHandler\EarlyBirdRateHandlerTests.cs" />
     <Compile Include="Domain\ParkingHandler\XandardRateHandlerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

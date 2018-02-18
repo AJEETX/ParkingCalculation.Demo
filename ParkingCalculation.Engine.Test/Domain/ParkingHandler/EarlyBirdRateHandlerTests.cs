@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 using ParkingCalculation.Engine.Handler;
 using ParkingCalculation.Engine.Model;
 using System;
@@ -10,23 +11,23 @@ using System.Threading.Tasks;
 namespace ParkingCalculation.Engine.Handler.Tests
 {
     [TestClass()]
-    public class XandardRateHandlerTests
+    public class EarlyBirdRateHandlerTests
     {
         [TestMethod()]
-        public void XandardRateHandlerGetParkingChargesTest_Get_Correct_ParkingCharges()
+        public void EarlyBirdRateHandlerGetParkingChargesTest__Get_Correct_ParkingCharges()
         {
             //given
-            var rndm = new Random();
-
-            DateTime entry=DateTime.Now.AddHours(-rndm.Next(50, 100)),exit= DateTime.Now.AddHours(-rndm.Next(20));
-            var sut = new XandardRateHandler();
+            DateTime entry = new DateTime(2018,2,19,9,20,00), exit = new DateTime(2018, 2, 19, 19, 50, 00);
+            var moqParkingRateHandler = new Mock<ParkingRateHandler>();
+            var sut=new EarlyBirdRateHandler();
+            sut.SetNextHandler(moqParkingRateHandler.Object);
 
             //when
             var result = sut.GetParkingCharges(entry, exit);
 
             //then
             Assert.IsInstanceOfType(result, typeof(IParkingReceipt));
-            Assert.IsTrue(result.RateType == RateType.STANDARD);
+            Assert.IsTrue(result.RateType == RateType.EARLY);
         }
     }
 }
