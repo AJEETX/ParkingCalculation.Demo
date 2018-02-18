@@ -1,11 +1,10 @@
 ## Welcome to ParkingCalculation Demo
-[![Inline docs](http://inch-ci.org/github/AJEETX/ParkingCalculation.Demo.svg?branch=master)](http://inch-ci.org/github/AJEETX/ParkingCalculation.Demo)
-
-You can use the [editor on GitHub](https://github.com/AJEETX/ParkingCalculation.Demo/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-[![Build Status](http://inch-ci.org/github/AJEETX/ParkingCalculation.Demo.svg?branch=master)](http://inch-ci.org/github/AJEETX)
 
 [![Build Status](https://travis-ci.org/AJEETX/ParkingCalculation.Demo.png?branch=master)](https://travis-ci.org/AJEETX/ParkingCalculation.Demo)
+
+[![Inline docs](http://inch-ci.org/github/AJEETX/ParkingCalculation.Demo.svg?branch=master)](https://github/AJEETX/ParkingCalculation.Demo)
+
+You can use the [editor on GitHub](https://github.com/AJEETX/ParkingCalculation.Demo/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
 ### Support or Contact
 
