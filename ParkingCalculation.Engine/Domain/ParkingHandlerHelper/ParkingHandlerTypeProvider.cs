@@ -11,14 +11,13 @@ namespace ParkingCalculation.Engine.Domain.ParkingHandlerHelper
     }
     class ParkingHandlerTypeProvider : IParkingHandlerTypeProvider
     {
+        static IEnumerable<Type> types;
         public IEnumerable<Type> GetParkingHandlerTypes()
         {
             GetAll();
             return types;
         }
-        static void GetAll() => 
-            types = AppDomain.CurrentDomain.GetAssemblies().SelectMany(s => s.GetTypes().Where(t => (typeof(ParkingRateHandler)).IsAssignableFrom(t)))
-                .Where(u => !u.IsAbstract && u.IsSubclassOf(typeof(ParkingRateHandler)));
-        static IEnumerable<Type> types;
+        static void GetAll() =>  types = AppDomain.CurrentDomain.GetAssemblies()
+            .SelectMany(s => s.GetTypes().Where(t => (typeof(ParkingRateHandler)).IsAssignableFrom(t))).Where(u => !u.IsAbstract && u.IsSubclassOf(typeof(ParkingRateHandler)));
     }
 }
