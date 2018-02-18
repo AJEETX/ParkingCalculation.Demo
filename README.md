@@ -1,5 +1,5 @@
 ## Welcome to ParkingCalculation Demo
-
+{<img src="http://inch-ci.org/github/AJEETX/ParkingCalculation.Demo.svg?branch=master" alt="Inline docs" />}[http://inch-ci.org/github/AJEETX/ParkingCalculation.Demo]
 You can use the [editor on GitHub](https://github.com/AJEETX/ParkingCalculation.Demo/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Code](https://github.com/AJEETX/ParkingCalculation.Demo/) to rebuild the pages in your site, from the content in your Markdown files.
