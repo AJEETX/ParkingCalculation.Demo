@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using ParkingCalculation.Engine;
+using ParkingCalculation.Engine.Config;
 using ParkingCalculation.Engine.Domain;
 using ParkingCalculation.Engine.Domain.ParkingHandlerHelper;
 using ParkingCalculation.Engine.Handler;
@@ -23,13 +24,10 @@ namespace ParkingCalculation.Engine.Tests
             var inDaysBefore = new Random().Next(50, 100); var outDaysBefore = new Random().Next(40, 50);
             DateTime inDateTime = DateTime.Now.AddHours(-inDaysBefore);
             DateTime outDateTime = DateTime.Now.AddHours(-outDaysBefore);
-            var typeProvider = new ParkingHandlerTypeProvider();
-            var provider = new ParkingHandlersProvider(typeProvider);
-            var starter = new ParkingRateHandlersSetting(provider);
-            var sut = new ParkingCalculationEngineManager(starter);
+            var IProgramRunner = UnityConfig.GetProgramRunner();
             
             //when
-            var result = sut.GenerateParkingCharge(inDateTime, outDateTime);
+            var result = IProgramRunner.Generate(inDateTime.ToString("d/M/yyyy H:m"), outDateTime.ToString("d/M/yyyy H:m"));
 
             //then
             Assert.IsInstanceOfType(result, typeof(IParkingReceipt));
