@@ -10,8 +10,7 @@ namespace ParkingCalculation.Engine.Domain
     }
     public class ProgramRunner: IProgramRunner
     {
-        DateTime entryDateTime, exitDateTime; CultureInfo culture = CultureInfo.InvariantCulture; DateTimeStyles styles = DateTimeStyles.None;
-        ParkingCalculationEngineManager _ParkingCalculationEngineManager; string format = "d/M/yyyy H:m";
+        ParkingCalculationEngineManager _ParkingCalculationEngineManager;
         public ProgramRunner(ParkingCalculationEngineManager ParkingCalculationEngineManager)
         {
             _ParkingCalculationEngineManager = ParkingCalculationEngineManager;
@@ -19,12 +18,9 @@ namespace ParkingCalculation.Engine.Domain
 
         public IParkingReceipt Generate(string entry, string exit)
         {
-            bool validEntry = DateTime.TryParseExact(entry, format, culture, styles, out entryDateTime);
-            bool validExit = DateTime.TryParseExact(exit, format, culture, styles, out exitDateTime);
-            if (validEntry && validExit)
-                return _ParkingCalculationEngineManager.GenerateParkingCharge(entryDateTime, exitDateTime);
-            else
+            if (entry.DateValidated()==DateTime.MinValue || exit.DateValidated()==DateTime.MinValue)
                 return new ParkingReceipt { Erred = true };
+            return  _ParkingCalculationEngineManager.GenerateParkingCharge(entry.DateValidated(), exit.DateValidated());
         }
     }
 }
