@@ -74,7 +74,7 @@
     <Compile Include="Domain\ParkingHandler\EarlyBirdRateHandler.cs" />
     <Compile Include="Domain\ParkingHandler\NiteRateHandler.cs" />
     <Compile Include="Domain\ParkingHandler\ParkingRateHandler.cs" />
-    <Compile Include="Domain\ParkingHandler\StandardRateHandler.cs" />
+    <Compile Include="Domain\ParkingHandler\XandardRateHandler.cs" />
     <Compile Include="Domain\ParkingHandler\WeekendRateHandler.cs" />
     <Compile Include="Domain\ParkingHandlerHelper\ParkingCalculationEngineManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -7,16 +7,16 @@ namespace ParkingCalculation.Engine.Domain.ParkingHandlerHelper
 {
      interface IParkingHandlersProvider
     {
-        IEnumerable<ParkingRateHandler> GetParkingHandler();
+        IEnumerable<IParkingRateHandler> GetParkingHandler();
     }
     class ParkingHandlersProvider : IParkingHandlersProvider
     {
-        IParkingHandlerTypeProvider _IParkingHandlerTypeProvider; static IEnumerable<Type> types; static List<ParkingRateHandler> parkingRateHandler;
+        IParkingHandlerTypeProvider _IParkingHandlerTypeProvider; static IEnumerable<Type> types; static List<IParkingRateHandler> parkingRateHandler;
         public ParkingHandlersProvider(IParkingHandlerTypeProvider IParkingHandlerTypeProvider)
         {
             _IParkingHandlerTypeProvider = IParkingHandlerTypeProvider;
         }
-        public IEnumerable<ParkingRateHandler> GetParkingHandler()
+        public IEnumerable<IParkingRateHandler> GetParkingHandler()
         {
             Get();
             return parkingRateHandler;
@@ -25,11 +25,11 @@ namespace ParkingCalculation.Engine.Domain.ParkingHandlerHelper
         {
             types = _IParkingHandlerTypeProvider.GetParkingHandlerTypes().OrderBy(o=>o.Name);
 
-            parkingRateHandler = new List<ParkingRateHandler>();
+            parkingRateHandler = new List<IParkingRateHandler>();
 
             foreach (var type in types) {
 
-                var handler = Activator.CreateInstance(type) as ParkingRateHandler;
+                var handler = Activator.CreateInstance(type) as IParkingRateHandler;
 
                 if (handler == null) continue;
 

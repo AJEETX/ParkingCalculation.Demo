@@ -18,6 +18,7 @@ namespace ParkingCalculation.Engine.Domain.ParkingHandlerHelper
             return types;
         }
         static void GetAll() =>  types = AppDomain.CurrentDomain.GetAssemblies()
-            .SelectMany(s => s.GetTypes().Where(t => (typeof(ParkingRateHandler)).IsAssignableFrom(t))).Where(u => !u.IsAbstract && u.IsSubclassOf(typeof(ParkingRateHandler)));
+            .SelectMany(s => s.GetTypes().Where(t => (typeof(IParkingRateHandler)).IsAssignableFrom(t)))
+            .Where(u => !u.IsAbstract && u.IsSubclassOf(typeof(ParkingRateHandler)));
     }
 }

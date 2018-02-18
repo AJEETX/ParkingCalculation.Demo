@@ -6,7 +6,7 @@ namespace ParkingCalculation.Engine.Domain
 {
      interface IParkingRateHandlersSetting
     {
-        ParkingRateHandler Set { get; }
+        IParkingRateHandler Set { get; }
     }
     class ParkingRateHandlersSetting : IParkingRateHandlersSetting
     {
@@ -15,7 +15,7 @@ namespace ParkingCalculation.Engine.Domain
         {
             _IParkingHandlersProvider = IParkingHandlersProvider;
         }
-        public ParkingRateHandler Set
+        public IParkingRateHandler Set
         {
             get {
                 var handlers = _IParkingHandlersProvider.GetParkingHandler().ToList();

@@ -4,15 +4,24 @@ using ParkingCalculation.Engine.Model;
 
 namespace ParkingCalculation.Engine.Handler
 {
-    abstract class ParkingRateHandler
+    interface IParkingRateHandler
     {
-        protected ParkingRateHandler _nextRateHandler;
-        protected abstract Decimal ParkingRate { get;  }
-        protected abstract string ParkingName { get; }
-        protected abstract RateType RateType { get; }
+        Decimal ParkingRate { get; }
+        string ParkingName { get; }
+        RateType RateType { get; }
+        void SetNextHandler(IParkingRateHandler nextHandler);
+        IParkingReceipt GetParkingCharges(DateTime entryDateAndTime, DateTime exitDateAndTime);
+        IParkingReceipt ProcessParkingRate(ParkingInOutDateAndTimeDTO inOutTimeDTO);
+    }
+    abstract class ParkingRateHandler: IParkingRateHandler
+    {
+        protected IParkingRateHandler _nextRateHandler;
+        public abstract Decimal ParkingRate { get;  }
+        public abstract string ParkingName { get; }
+        public abstract RateType RateType { get; }
         public abstract IParkingReceipt GetParkingCharges(DateTime entryDateAndTime, DateTime exitDateAndTime);
-        public void SetNextHandler(ParkingRateHandler nextHandler) { _nextRateHandler = nextHandler; }
-        protected virtual IParkingReceipt ProcessParkingRate(ParkingInOutDateAndTimeDTO inOutTimeDTO)
+        public virtual void SetNextHandler(IParkingRateHandler nextHandler) { _nextRateHandler = nextHandler; }
+        public virtual IParkingReceipt ProcessParkingRate(ParkingInOutDateAndTimeDTO inOutTimeDTO)
         {
             if (_nextRateHandler == null) return null;
 
