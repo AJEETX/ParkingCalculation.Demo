@@ -3,7 +3,7 @@ using ParkingCalculation.Engine.Model;
 
 namespace ParkingCalculation.Engine.Handler
 {
-    public class EarlyBirdRateHandler : ParkingRateHandler
+    class EarlyBirdRateHandler : ParkingRateHandler
     {
         TimeSpan entryCommenceTime = new TimeSpan(6, 30, 0), entryFinishTime = new TimeSpan(9, 30, 0); //
         TimeSpan exitCommenceTime = new TimeSpan(15, 30, 0), exitFinishTime = new TimeSpan(23, 30, 0); //

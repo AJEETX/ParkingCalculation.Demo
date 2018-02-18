@@ -4,9 +4,9 @@ using System.Globalization;
 
 namespace ParkingCalculation.Engine
 {
-    public static class Extension
+    static class Extension
     {
-        const string entryFormat = @".\s+(?<inputDate>[0-9]{2}\\[0-9]{2}\\[0-9]{4}\s+[0-9]{2}\:[0-6]{2})",format = "d/M/yyyy H:m";
+        const string format = "d/M/yyyy H:m";
         public static List<DayOfWeek> Weekdays
         {
             get {
@@ -27,9 +27,8 @@ namespace ParkingCalculation.Engine
         }
         public static DateTime DateValidated(this string strDate)
         {
-            DateTime date;
             CultureInfo culture = CultureInfo.InvariantCulture; DateTimeStyles styles = DateTimeStyles.None;
-            if (DateTime.TryParseExact(strDate, format, culture, styles, out date))
+            if (DateTime.TryParseExact(strDate, format, culture, styles, out DateTime date))
                 return date;
             return date;
         }

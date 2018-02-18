@@ -4,11 +4,11 @@ using ParkingCalculation.Engine.Model;
 
 namespace ParkingCalculation.Engine
 {
-    public interface IParkingCalculationEngineManager
+    interface IParkingCalculationEngineManager
     {
         IParkingReceipt GenerateParkingCharge(DateTime entry, DateTime exit);
     }
-    public class ParkingCalculationEngineManager : IParkingCalculationEngineManager
+    class ParkingCalculationEngineManager : IParkingCalculationEngineManager
     {
         IParkingRateHandlersSetting _IParkingRateHandlersSetting;
         public ParkingCalculationEngineManager(IParkingRateHandlersSetting IParkingRateHandlersSetting)

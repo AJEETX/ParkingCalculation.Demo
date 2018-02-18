@@ -5,11 +5,11 @@ using ParkingCalculation.Engine.Handler;
 
 namespace ParkingCalculation.Engine.Domain.ParkingHandlerHelper
 {
-    public interface IParkingHandlersProvider
+     interface IParkingHandlersProvider
     {
         IEnumerable<ParkingRateHandler> GetParkingHandler();
     }
-    public class ParkingHandlersProvider : IParkingHandlersProvider
+    class ParkingHandlersProvider : IParkingHandlersProvider
     {
         IParkingHandlerTypeProvider _IParkingHandlerTypeProvider; static IEnumerable<Type> types; static List<ParkingRateHandler> parkingRateHandler;
         public ParkingHandlersProvider(IParkingHandlerTypeProvider IParkingHandlerTypeProvider)

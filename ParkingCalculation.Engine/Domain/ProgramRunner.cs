@@ -8,7 +8,7 @@ namespace ParkingCalculation.Engine.Domain
     {
         IParkingReceipt Generate(string entry, string exit);
     }
-    public class ProgramRunner: IProgramRunner
+    class ProgramRunner: IProgramRunner
     {
         ParkingCalculationEngineManager _ParkingCalculationEngineManager;
         public ProgramRunner(ParkingCalculationEngineManager ParkingCalculationEngineManager)

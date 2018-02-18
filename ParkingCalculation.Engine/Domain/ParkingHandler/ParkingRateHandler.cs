@@ -4,7 +4,7 @@ using ParkingCalculation.Engine.Model;
 
 namespace ParkingCalculation.Engine.Handler
 {
-    public abstract class ParkingRateHandler
+    abstract class ParkingRateHandler
     {
         protected ParkingRateHandler _nextRateHandler;
         protected abstract Decimal ParkingRate { get;  }

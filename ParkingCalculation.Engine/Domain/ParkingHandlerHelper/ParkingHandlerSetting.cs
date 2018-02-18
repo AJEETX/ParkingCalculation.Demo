@@ -4,11 +4,11 @@ using ParkingCalculation.Engine.Handler;
 
 namespace ParkingCalculation.Engine.Domain
 {
-    public interface IParkingRateHandlersSetting
+     interface IParkingRateHandlersSetting
     {
         ParkingRateHandler Set { get; }
     }
-    public class ParkingRateHandlersSetting : IParkingRateHandlersSetting
+    class ParkingRateHandlersSetting : IParkingRateHandlersSetting
     {
         IParkingHandlersProvider _IParkingHandlersProvider;
         public ParkingRateHandlersSetting(IParkingHandlersProvider IParkingHandlersProvider)

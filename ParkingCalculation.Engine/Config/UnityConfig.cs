@@ -6,14 +6,15 @@ namespace ParkingCalculation.Engine.Config
 {
     public class UnityConfig
     {
-        public static ProgramRunner GetProgramRunner()
+        public static IProgramRunner GetProgramRunner()
         {
             IUnityContainer unitycontainer = new UnityContainer();
+            unitycontainer.RegisterType<IProgramRunner, ProgramRunner>();
             unitycontainer.RegisterType<IParkingHandlersProvider, ParkingHandlersProvider>();
             unitycontainer.RegisterType<IParkingHandlerTypeProvider, ParkingHandlerTypeProvider>();
             unitycontainer.RegisterType<IParkingRateHandlersSetting, ParkingRateHandlersSetting>();
             unitycontainer.RegisterType<IParkingCalculationEngineManager, ParkingCalculationEngineManager>();
-            return unitycontainer.Resolve<ProgramRunner>();
+            return unitycontainer.Resolve<IProgramRunner>();
         }
     }
 }

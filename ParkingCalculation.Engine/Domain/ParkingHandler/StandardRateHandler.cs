@@ -3,7 +3,7 @@ using ParkingCalculation.Engine.Model;
 
 namespace ParkingCalculation.Engine.Handler
 {
-    public class XandardRateHandler : ParkingRateHandler
+    class XandardRateHandler : ParkingRateHandler
     {
         Decimal StandardParkingRate = 20;string standardRateName = "Standard Rate"; Decimal price = 0;
         RateType standardType = RateType.STANDARD;
