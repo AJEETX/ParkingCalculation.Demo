@@ -8,4 +8,4 @@ You can use the [editor on GitHub](https://github.com/AJEETX/ParkingCalculation.
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Having trouble with Pages? Check out our [documentation](https://github.com/AJEETX/ParkingCalculation.Demo/edit/master/README.md) or [contact support](mailto:ajeetkumar@email.com) and we’ll help you sort it out.
