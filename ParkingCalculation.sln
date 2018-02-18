@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingCalculation.Demo", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingCalculation.Engine.Test", "ParkingCalculation.Engine.Test\ParkingCalculation.Engine.Test.csproj", "{CE31FC54-BF07-417C-8729-644031960F8A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{C3A7221B-E109-403C-BEDC-A141619B34E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{D40085B6-C591-4A45-A1C8-438856AD9568}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{6776A05C-0033-45D4-82B3-54694D0EE8B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +36,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2F24E251-7E7F-4FCF-9091-6B25158DB6B3} = {C3A7221B-E109-403C-BEDC-A141619B34E6}
+		{0C9714B1-4549-4A50-BF7C-9854B76A9CC0} = {6776A05C-0033-45D4-82B3-54694D0EE8B7}
+		{CE31FC54-BF07-417C-8729-644031960F8A} = {D40085B6-C591-4A45-A1C8-438856AD9568}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5D7E0265-2A95-4AFA-8E58-50597EB249FA}
