@@ -6,7 +6,7 @@ You can use the [editor on GitHub](https://github.com/AJEETX/ParkingCalculation.
 
 [](http://inch-ci.org/github/AJEETX/ParkingCalculation.Demo.svg?branch=master)
 
-Whenever you commit to this repository, GitHub Pages will run [Code](https://github.com/AJEETX/ParkingCalculation.Demo/) to rebuild the pages in your site, from the content in your Markdown files.
+Whenever you commit to this repository, GitHub Pages will run [Code](https://travis-ci.org/AJEETX/ParkingCalculation.Demo.svg?branch=master) to rebuild the pages in your site, from the content in your Markdown files.
 
 
 ###  Themes
