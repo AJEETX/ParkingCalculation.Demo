@@ -5,7 +5,7 @@ namespace ParkingCalculation.Demo
     {
         static void Main(string[] args)
         {
-            //Hook.Generate();
+            Hook.Generate();
             Console.ReadLine();
         }
     }
