@@ -1,11 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ParkingCalculation.Engine.Handler;
 using ParkingCalculation.Engine.Model;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ParkingCalculation.Engine.Handler.Tests
 {
@@ -17,7 +12,6 @@ namespace ParkingCalculation.Engine.Handler.Tests
         {
             //given
             var rndm = new Random();
-
             DateTime entry=DateTime.Now.AddHours(-rndm.Next(50, 100)),exit= DateTime.Now.AddHours(-rndm.Next(20));
             var sut = new XandardRateHandler();
 

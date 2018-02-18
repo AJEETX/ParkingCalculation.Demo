@@ -1,16 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
-using ParkingCalculation.Engine;
 using ParkingCalculation.Engine.Config;
 using ParkingCalculation.Engine.Domain;
-using ParkingCalculation.Engine.Domain.ParkingHandlerHelper;
 using ParkingCalculation.Engine.Handler;
 using ParkingCalculation.Engine.Model;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ParkingCalculation.Engine.Tests
 {
