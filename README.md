@@ -3,7 +3,7 @@
 
 You can use the [editor on GitHub](https://github.com/AJEETX/ParkingCalculation.Demo/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-[[[Build Status](http://inch-ci.org/github/AJEETX/ParkingCalculation.Demo.svg?branch=master)](https://api.travis-ci.org/AJEETX/ParkingCalculation.Demo.svg?branch=master)
+[[Build Status](http://inch-ci.org/github/AJEETX/ParkingCalculation.Demo.svg?branch=master)](https://api.travis-ci.org/AJEETX/ParkingCalculation.Demo.svg?branch=master)
 
 
 ### Support or Contact
