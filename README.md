@@ -3,14 +3,8 @@
 
 You can use the [editor on GitHub](https://github.com/AJEETX/ParkingCalculation.Demo/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-[](http://inch-ci.org/github/AJEETX/ParkingCalculation.Demo.svg?branch=master)
+[![Inline docs](http://inch-ci.org/github/AJEETX/ParkingCalculation.Demo.svg?branch=master)](https://api.travis-ci.org/AJEETX/ParkingCalculation.Demo.svg?branch=master)
 
-Whenever you commit to this repository, GitHub Pages will run [Code](https://api.travis-ci.org/AJEETX/ParkingCalculation.Demo.svg?branch=master) to rebuild the pages in your site, from the content in your Markdown files.
-
-
-###  Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/AJEETX/ParkingCalculation.Demo/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
 ### Support or Contact
 
