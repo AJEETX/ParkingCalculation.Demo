@@ -5,15 +5,25 @@ using System;
 namespace ParkingCalculation.Engine.Handler.Tests
 {
     [TestClass()]
-    public class XandardRateHandlerTests
+    public class StandardRateHandlerTests
     {
+        [TestInitialize]
+        public void Init()
+        {
+
+        }
+        [TestCleanup]
+        public void CleanUp()
+        {
+
+        }
         [TestMethod()]
-        public void XandardRateHandlerGetParkingChargesTest_Get_Correct_ParkingCharges()
+        public void StandardRateHandlerGetParkingChargesTest_Get_Correct_ParkingCharges()
         {
             //given
             var rndm = new Random();
             DateTime entry=DateTime.Now.AddHours(-rndm.Next(50, 100)),exit= DateTime.Now.AddHours(-rndm.Next(20));
-            var sut = new XandardRateHandler();
+            var sut = new StandardRateHandler();
 
             //when
             var result = sut.GetParkingCharges(entry, exit);

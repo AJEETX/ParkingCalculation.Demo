@@ -6,6 +6,7 @@ namespace ParkingCalculation.Engine.Handler
 {
     interface IParkingRateHandler
     {
+        int Id { get; }
         Decimal ParkingRate { get; }
         string ParkingName { get; }
         RateType RateType { get; }
@@ -16,6 +17,7 @@ namespace ParkingCalculation.Engine.Handler
     abstract class ParkingRateHandler: IParkingRateHandler
     {
         protected IParkingRateHandler _nextRateHandler;
+        public abstract int Id { get; }
         public abstract Decimal ParkingRate { get;  }
         public abstract string ParkingName { get; }
         public abstract RateType RateType { get; }

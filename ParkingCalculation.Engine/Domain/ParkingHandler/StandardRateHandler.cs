@@ -3,12 +3,12 @@ using ParkingCalculation.Engine.Model;
 
 namespace ParkingCalculation.Engine.Handler
 {
-    interface IXandardParkingRateHandler : IParkingRateHandler { }
-    class XandardRateHandler : ParkingRateHandler, IXandardParkingRateHandler
+    interface IStandardParkingRateHandler : IParkingRateHandler { }
+    class StandardRateHandler : ParkingRateHandler, IStandardParkingRateHandler
     {
         Decimal StandardParkingRate = 20;string standardRateName = "Standard Rate"; Decimal price = 0;
         RateType standardType = RateType.STANDARD;
-
+        public override int Id { get {return 4; } }
         public override decimal ParkingRate { get { return StandardParkingRate; } }
         public override string ParkingName{ get { return standardRateName; }}
         public override RateType RateType { get { return standardType; } }

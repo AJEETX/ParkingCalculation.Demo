@@ -65,16 +65,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config\UnityConfig.cs" />
+    <Compile Include="Domain\ParkingHandlerHelper\IParkingRateHandlerProvider.cs" />
     <Compile Include="Domain\ParkingHandlerHelper\ParkingHandlerSetting.cs" />
-    <Compile Include="Domain\ParkingHandlerHelper\ParkingHandlerTypeProvider.cs" />
-    <Compile Include="Domain\ParkingHandlerHelper\ParkingHandlersProvider.cs" />
     <Compile Include="Domain\ProgramRunner.cs" />
     <Compile Include="Extensions\Extension.cs" />
     <Compile Include="Model\Models.cs" />
     <Compile Include="Domain\ParkingHandler\EarlyBirdRateHandler.cs" />
     <Compile Include="Domain\ParkingHandler\NiteRateHandler.cs" />
     <Compile Include="Domain\ParkingHandler\ParkingRateHandler.cs" />
-    <Compile Include="Domain\ParkingHandler\XandardRateHandler.cs" />
+    <Compile Include="Domain\ParkingHandler\StandardRateHandler.cs" />
     <Compile Include="Domain\ParkingHandler\WeekendRateHandler.cs" />
     <Compile Include="Domain\ParkingHandlerHelper\ParkingCalculationEngineManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

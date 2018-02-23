@@ -3,7 +3,7 @@ using ParkingCalculation.Engine.Model;
 
 namespace ParkingCalculation.Engine.Handler
 {
-    interface IEarlyBirdIParkingRateHandler : IParkingRateHandler { }
+    interface IEarlyBirdIParkingRateHandler : IParkingRateHandler {  }
 
     class EarlyBirdRateHandler : ParkingRateHandler, IEarlyBirdIParkingRateHandler
     {
@@ -11,6 +11,7 @@ namespace ParkingCalculation.Engine.Handler
         TimeSpan exitCommenceTime = new TimeSpan(15, 30, 0), exitFinishTime = new TimeSpan(23, 30, 0); //
         Decimal EarlyBirdParkingRate = 13;string earlyBirdRateName = "Early Bird Rate";
         RateType earlyBirdType = RateType.EARLY;
+        public override int Id { get { return 1; } }
 
         public override decimal ParkingRate { get { return EarlyBirdParkingRate; } }
         public override string ParkingName { get { return earlyBirdRateName; } }

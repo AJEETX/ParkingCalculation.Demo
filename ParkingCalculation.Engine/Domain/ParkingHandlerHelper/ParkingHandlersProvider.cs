@@ -36,6 +36,5 @@ namespace ParkingCalculation.Engine.Domain.ParkingHandlerHelper
                 parkingRateHandler.Add(handler);
             }
         }
-        
     }
 }
