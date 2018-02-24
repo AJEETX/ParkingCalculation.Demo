@@ -66,7 +66,7 @@
   <ItemGroup>
     <Compile Include="Config\UnityConfig.cs" />
     <Compile Include="Domain\ParkingHandlerHelper\IParkingRateHandlerProvider.cs" />
-    <Compile Include="Domain\ParkingHandlerHelper\ParkingHandlerSetting.cs" />
+    <Compile Include="Domain\ParkingHandlerHelper\ParkingRateHandlersSetting.cs" />
     <Compile Include="Domain\ProgramRunner.cs" />
     <Compile Include="Extensions\Extension.cs" />
     <Compile Include="Model\Models.cs" />

@@ -61,9 +61,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\ParkingHandlerHelper\ParkingRateHandlerProviderTests.cs" />
+    <Compile Include="Domain\ParkingHandlerHelper\ParkingRateHandlersSettingTests.cs" />
     <Compile Include="Domain\ProgramRunnerTests.cs" />
-    <Compile Include="Domain\ParkingHandler\EarlyBirdRateHandlerTests.cs" />
-    <Compile Include="Domain\ParkingHandler\StandardRateHandlerTests.cs" />
+    <Compile Include="Domain\ParkingHandler\RateHandlerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

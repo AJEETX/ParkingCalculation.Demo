@@ -41,8 +41,7 @@ namespace ParkingCalculation.Engine.Handler
 
             if (Extension.WeekEnds.Any(w=>w.Equals(entryDay)) && Extension.WeekEnds.Any(x => x.Equals(exitDay)) && exitDateAndTime.Subtract(entryDateAndTime).Days<3){
                 parkingInOutDateAndTimeDTO.EntryExitConditionMet = true;
-            }
-            return base.ProcessParkingRate(parkingInOutDateAndTimeDTO);
+            } return base.ProcessParkingRate(parkingInOutDateAndTimeDTO);
         }
     }
 }
