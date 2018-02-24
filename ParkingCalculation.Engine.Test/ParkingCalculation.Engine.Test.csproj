@@ -63,7 +63,7 @@
   <ItemGroup>
     <Compile Include="Domain\ProgramRunnerTests.cs" />
     <Compile Include="Domain\ParkingHandler\EarlyBirdRateHandlerTests.cs" />
-    <Compile Include="Domain\ParkingHandler\XandardRateHandlerTests.cs" />
+    <Compile Include="Domain\ParkingHandler\StandardRateHandlerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

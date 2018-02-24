@@ -23,6 +23,7 @@ namespace ParkingCalculation.Engine.Handler
             if (timeSpan.Hours > 3 && timeSpan.Hours <= 24)  price=price+ParkingRate;
             if (timeSpan.Hours > 2 && timeSpan.Hours <= 3)  price = price + 15;
             if (timeSpan.Hours > 1 && timeSpan.Hours <= 2)  price = price + 10;
+            if (timeSpan.Hours > 0 && timeSpan.Hours <= 1)  price = price + 5;
             if (timeSpan.Minutes > 0 && timeSpan.Minutes <= 59)  price = price + 5;
             return new ParkingReceipt { ParkingName=standardRateName, ParkingPrice=price, RateType=standardType };
         }
