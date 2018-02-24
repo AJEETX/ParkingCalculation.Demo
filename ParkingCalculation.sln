@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingCalculation.Engine", "ParkingCalculation.Engine\ParkingCalculation.Engine.csproj", "{2F24E251-7E7F-4FCF-9091-6B25158DB6B3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingCalculation.Demo", "ParkingCalculation.Engine.Demo\ParkingCalculation.Demo.csproj", "{0C9714B1-4549-4A50-BF7C-9854B76A9CC0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2F24E251-7E7F-4FCF-9091-6B25158DB6B3} = {2F24E251-7E7F-4FCF-9091-6B25158DB6B3}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingCalculation.Engine.Test", "ParkingCalculation.Engine.Test\ParkingCalculation.Engine.Test.csproj", "{CE31FC54-BF07-417C-8729-644031960F8A}"
 EndProject

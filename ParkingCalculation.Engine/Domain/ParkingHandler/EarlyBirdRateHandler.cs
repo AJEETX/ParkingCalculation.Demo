@@ -1,6 +1,6 @@
 ﻿using System;
 using ParkingCalculation.Engine.Model;
-
+using System.Linq;
 namespace ParkingCalculation.Engine.Handler
 {
     interface IEarlyBirdIParkingRateHandler : IParkingRateHandler {  }
@@ -13,12 +13,15 @@ namespace ParkingCalculation.Engine.Handler
         RateType earlyBirdType = RateType.EARLY;
         public override int Id { get { return 1; } }
 
-        public override decimal ParkingRate { get { return EarlyBirdParkingRate; } }
+        public override decimal ParkingRate { get { return EarlyBirdParkingRate; } set { EarlyBirdParkingRate = value; } }
         public override string ParkingName { get { return earlyBirdRateName; } }
         public override RateType RateType { get { return earlyBirdType; } }
 
         public override IParkingReceipt GetParkingCharges(DateTime entryDateAndTime, DateTime exitDateAndTime)
         {
+            var entryDay = entryDateAndTime.Date.DayOfWeek;
+            var exitDay = exitDateAndTime.Date.DayOfWeek;
+
             var parkingInOutDateAndTime = new ParkingInOutDateAndTime{
                 EntryDateTime = entryDateAndTime, ExitDateTime= exitDateAndTime
             };
@@ -31,7 +34,13 @@ namespace ParkingCalculation.Engine.Handler
             var parkingInOutDateAndTimeDTO = new ParkingInOutDateAndTimeDTO {
                 EntryTimeFrame = entryTimeFrame, ExitTimeFrame = exitTimeFrame, ParkingInOutDateAndTime=parkingInOutDateAndTime, ParkingRate= ParkingRate,
                 DaysOfWeek =Extension.Weekdays
-            }; return base.ProcessParkingRate(parkingInOutDateAndTimeDTO);
+            };
+
+            if (Extension.Weekdays.Any(w => w.Equals(entryDay)) && Extension.Weekdays.Any(x => x.Equals(entryDay)) && exitDateAndTime.Subtract(entryDateAndTime).Days < 1)
+            {
+                parkingInOutDateAndTimeDTO.EntryExitConditionMet = true;
+            }
+            return base.ProcessParkingRate(parkingInOutDateAndTimeDTO);
         }
     }
 }

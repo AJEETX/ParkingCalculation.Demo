@@ -9,7 +9,7 @@ namespace ParkingCalculation.Engine.Handler
         Decimal StandardParkingRate = 20;string standardRateName = "Standard Rate"; Decimal price = 0;
         RateType standardType = RateType.STANDARD;
         public override int Id { get {return 4; } }
-        public override decimal ParkingRate { get { return StandardParkingRate; } }
+        public override decimal ParkingRate { get { return StandardParkingRate; } set { StandardParkingRate = value; } }
         public override string ParkingName{ get { return standardRateName; }}
         public override RateType RateType { get { return standardType; } }
 

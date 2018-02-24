@@ -7,7 +7,7 @@ namespace ParkingCalculation.Engine.Handler
     interface IParkingRateHandler
     {
         int Id { get; }
-        Decimal ParkingRate { get; }
+        Decimal ParkingRate { get; set; }
         string ParkingName { get; }
         RateType RateType { get; }
         void SetNextHandler(IParkingRateHandler nextHandler);
@@ -18,7 +18,7 @@ namespace ParkingCalculation.Engine.Handler
     {
         protected IParkingRateHandler _nextRateHandler;
         public abstract int Id { get; }
-        public abstract Decimal ParkingRate { get;  }
+        public abstract Decimal ParkingRate { get; set; }
         public abstract string ParkingName { get; }
         public abstract RateType RateType { get; }
         public abstract IParkingReceipt GetParkingCharges(DateTime entryDateAndTime, DateTime exitDateAndTime);
@@ -29,17 +29,10 @@ namespace ParkingCalculation.Engine.Handler
 
             var timeInOut = inOutTimeDTO.ParkingInOutDateAndTime;
 
-            var entryDay = timeInOut.EntryDateTime.Date.DayOfWeek;
-            var exitDay = timeInOut.ExitDateTime.Date.DayOfWeek;
-
             var entryTimeCondition = timeInOut.EntryDateTime.TimeBetween(inOutTimeDTO.EntryTimeFrame.EntryCommenceTime, inOutTimeDTO.EntryTimeFrame.EntryFinishTime);
             var exitTimeCondition = timeInOut.ExitDateTime.TimeBetween(inOutTimeDTO.ExitTimeFrame.ExitCommenceTime, inOutTimeDTO.ExitTimeFrame.ExitFinishTime);
 
-            var entryDayCondition = inOutTimeDTO.DaysOfWeek.Any(w => w.Equals(entryDay));
-            var exitDayCondition = inOutTimeDTO.DaysOfWeek.Any(w => w.Equals(exitDay));
-            var lessThan24Hr = timeInOut.ExitDateTime.Subtract(timeInOut.EntryDateTime).Days < 1;
-
-            if (entryDayCondition && exitDayCondition && lessThan24Hr && entryTimeCondition && exitTimeCondition) {
+            if (inOutTimeDTO.EntryExitConditionMet && entryTimeCondition && exitTimeCondition) {
                 return new ParkingReceipt { ParkingName = ParkingName, ParkingPrice = ParkingRate, Erred=false, RateType=RateType } ;
             }
             else{

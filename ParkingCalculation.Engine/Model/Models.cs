@@ -21,6 +21,7 @@ namespace ParkingCalculation.Engine.Model
         public ExitTimeFrame ExitTimeFrame { get; set; }
         public Decimal ParkingRate { get; set; }
         public IEnumerable<DayOfWeek> DaysOfWeek { get; set; }
+        public bool EntryExitConditionMet { get; set; }
     }
     public class EntryTimeFrame
     {
