@@ -98,14 +98,14 @@ namespace ParkingCalculation.Engine.Handler.Tests
         {
             //given
             var rndm = new Random();
-            DateTime entry = DateTime.Now.AddHours(rndm.Next(3, 4)), exit = DateTime.Now.AddHours(rndm.Next(5, 6));
+            DateTime entry = DateTime.Now.AddHours(rndm.Next(3, 4)), exit = DateTime.Now.AddHours(rndm.Next(4, 5));
             var sut = new StandardRateHandler();
 
             //when
             var result = sut.GetParkingCharges(entry, exit);
 
             //then
-            Assert.AreEqual(10, result.ParkingPrice);
+            Assert.AreEqual(5, result.ParkingPrice);
         }
         [TestMethod()]
         public void WeekendRateHandlerGetParkingChargesTest_Get_Correct_ParkingCharges()

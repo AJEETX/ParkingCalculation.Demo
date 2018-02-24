@@ -36,7 +36,7 @@
       <HintPath>..\packages\Unity.5.6.0\lib\net45\CommonServiceLocator.dll</HintPath>
     </Reference>
     <Reference Include="ParkingCalculation.Engine, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ParkingCalculation.Engine.1.0.6\lib\net452\ParkingCalculation.Engine.dll</HintPath>
+      <HintPath>..\packages\ParkingCalculation.Engine.1.0.7\lib\net452\ParkingCalculation.Engine.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
