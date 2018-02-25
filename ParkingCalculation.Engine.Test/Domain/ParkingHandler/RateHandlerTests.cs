@@ -55,8 +55,7 @@ namespace ParkingCalculation.Engine.Handler.Tests
         public void StandardRateHandlerGetParkingChargesTest_Get_20_ParkingCharges_for_3_hour_to_24_hour()
         {
             //given
-            var rndm = new Random();
-            DateTime entry = DateTime.Now.AddHours(rndm.Next(4)), exit = DateTime.Now.AddHours(rndm.Next(7,28));
+            DateTime entry = new DateTime(2018, 2, 19, 9, 20, 00), exit = new DateTime(2018, 2, 19, 13, 50, 00);
             var sut = new StandardRateHandler();
 
             //when
