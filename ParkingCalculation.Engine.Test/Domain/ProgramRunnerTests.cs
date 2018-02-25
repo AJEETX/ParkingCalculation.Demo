@@ -6,11 +6,44 @@ using ParkingCalculation.Engine.Handler;
 using ParkingCalculation.Engine.Model;
 using System;
 
-namespace ParkingCalculation.Engine.Tests
+namespace ParkingCalculation.Engine.Domain.Tests
 {
     [TestClass()]
-    public class ParkingCalculationEngineManagerTests
+    public class ProgramRunnerTests
     {
+        [TestMethod()]
+        public void ProgramRunnerGenerateTest_on_valid_input_times_generate_correct_parking_charges()
+        {
+            //given
+            DateTime entry = new DateTime(2018,2,19,9,20,00), exit = new DateTime(2018, 2, 19, 19, 50, 00);
+            var moqParkingCalculationEngineManager = new Mock<IParkingCalculationEngineManager>();
+            moqParkingCalculationEngineManager.Setup(m => m.GenerateParkingCharge(It.IsAny<DateTime>(), It.IsAny<DateTime>())).Returns(new ParkingReceipt { });
+            var sut = new ProgramRunner(moqParkingCalculationEngineManager.Object);
+
+            //when
+            var result = sut.Generate(entry.ToString("d/M/yyyy H:m"), exit.ToString("d/M/yyyy H:m"));
+
+            //then
+            Assert.IsInstanceOfType(result, typeof(IParkingReceipt));
+            moqParkingCalculationEngineManager.Verify(v => v.GenerateParkingCharge(It.IsAny<DateTime>(), It.IsAny<DateTime>()), Times.Once);
+        }
+        [TestMethod()]
+        public void ProgramRunnerGenerateTest_on_invalid_input_times_generate_err_message()
+        {
+            //given
+            DateTime entry = DateTime.MinValue, exit = new DateTime(2018, 2, 19, 19, 50, 00);
+            var moqParkingCalculationEngineManager = new Mock<IParkingCalculationEngineManager>();
+            moqParkingCalculationEngineManager.Setup(m => m.GenerateParkingCharge(It.IsAny<DateTime>(), It.IsAny<DateTime>())).Returns(new ParkingReceipt { });
+            var sut = new ProgramRunner(moqParkingCalculationEngineManager.Object);
+
+            //when
+            var result = sut.Generate(entry.ToString("d/M/yyyy H:m"), exit.ToString("d/M/yyyy H:m"));
+
+            //then
+            Assert.IsInstanceOfType(result, typeof(IParkingReceipt));
+            Assert.IsTrue(result.Erred);
+            moqParkingCalculationEngineManager.Verify(v => v.GenerateParkingCharge(It.IsAny<DateTime>(), It.IsAny<DateTime>()), Times.Never);
+        }
         [TestMethod()]
         public void IntegrationTest_valid_inputs_returns_price_and_parking_type_name()
         {

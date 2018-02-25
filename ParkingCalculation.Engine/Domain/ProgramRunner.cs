@@ -10,8 +10,8 @@ namespace ParkingCalculation.Engine.Domain
     }
     class ProgramRunner: IProgramRunner
     {
-        ParkingCalculationEngineManager _ParkingCalculationEngineManager;
-        public ProgramRunner(ParkingCalculationEngineManager ParkingCalculationEngineManager)
+        IParkingCalculationEngineManager _ParkingCalculationEngineManager;
+        public ProgramRunner(IParkingCalculationEngineManager ParkingCalculationEngineManager)
         {
             _ParkingCalculationEngineManager = ParkingCalculationEngineManager;
         }

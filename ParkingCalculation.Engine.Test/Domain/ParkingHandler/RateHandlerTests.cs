@@ -56,14 +56,14 @@ namespace ParkingCalculation.Engine.Handler.Tests
         {
             //given
             var rndm = new Random();
-            DateTime entry = DateTime.Now.AddHours(-rndm.Next(3, 24)), exit = DateTime.Now.AddHours(-rndm.Next(3));
+            DateTime entry = DateTime.Now.AddHours(rndm.Next(4)), exit = DateTime.Now.AddHours(rndm.Next(7,28));
             var sut = new StandardRateHandler();
 
             //when
             var result = sut.GetParkingCharges(entry, exit);
 
             //then
-            Assert.AreEqual(result.ParkingPrice, 20);
+            Assert.AreEqual(20,result.ParkingPrice);
         }
         [TestMethod()]
         public void StandardRateHandlerGetParkingChargesTest_Get_15_ParkingCharges_for_2_hour_to_3_hour()
