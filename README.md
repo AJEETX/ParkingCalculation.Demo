@@ -28,7 +28,7 @@
 
 Having any trouble? Check out our [documentation](https://github.com/AJEETX/ParkingCalculation.Demo/blob/master/README.md) or [contact support](mailto:ajeetkumar@email.com) and we’ll help you sort it out.
 
-> **nuget** [![Downloads](https://img.shields.io/nuget/dt/ParkingCalculation.Engine.svg?style=plastic)](https://www.nuget.org/stats/packages/ParkingCalculation.Engine?groupby=Version)
+> [![Downloads](https://img.shields.io/nuget/dt/ParkingCalculation.Engine.svg?style=plastic)](https://www.nuget.org/stats/packages/ParkingCalculation.Engine?groupby=Version)
 
 > [![HitCount](http://hits.dwyl.io/ajeetx/ParkingCalculation.Demo/projects/1.svg)](http://hits.dwyl.io/ajeetx/ParkingCalculation.Demo/projects/1)
 
