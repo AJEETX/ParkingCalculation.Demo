@@ -1,11 +1,11 @@
 ## Welcome to ParkingCalculation Demo ![GitHub release](https://img.shields.io/github/release/ajeetx/ParkingCalculation.Demo.svg?style=for-the-badge)
 
 	
-| Release | Build | .Net  | Dependency |
+| Release | Build | .Net Version | Dependency |
 | ---     | ---   | ---    | ---        |
-|[![Wrapper](https://img.shields.io/badge/ParkingCalculation-Demo-blue.svg)](https://www.nuget.org/packages/ParkingCalculation.Engine/2.0.0) | [![Build Status](https://travis-ci.org/AJEETX/ParkingCalculation.Demo.png?branch=master&style=for-the-badge)](https://travis-ci.org/AJEETX/ParkingCalculation.Demo) | [![.Net Framework](https://img.shields.io/badge/DotNet-4.6.1-blue.svg?style=plastic)](https://www.microsoft.com/en-au/download/details.aspx?id=49981) | [![dependencies Status](https://img.shields.io/badge/dependency-none-brightgreen.svg?style=plastic)](https://img.shields.io/badge/dependency-none-brightgreen.svg) |
+|[![Wrapper](https://img.shields.io/badge/ParkingCalculationDemo-stable-brightgreen.svg)](https://www.nuget.org/packages/ParkingCalculation.Engine/2.0.0) | [![Build Status](https://travis-ci.org/AJEETX/ParkingCalculation.Demo.png?branch=master&style=for-the-badge)](https://travis-ci.org/AJEETX/ParkingCalculation.Demo) | [![.Net Framework](https://img.shields.io/badge/DotNet-4.6.1-blue.svg?style=plastic)](https://www.microsoft.com/en-au/download/details.aspx?id=49981) | [![dependencies Status](https://img.shields.io/badge/dependency-none-brightgreen.svg?style=plastic)](https://img.shields.io/badge/dependency-none-brightgreen.svg) |
 
-### The application calculates the parking charge based on the below entry-exit details
+#### The application calculates the parking charge based on the below entry-exit times and the rates below
 
 ##### Parking entry/exit conditions/details
 
