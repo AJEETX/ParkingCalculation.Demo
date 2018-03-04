@@ -7,10 +7,28 @@
 
 
 
+##### Parking entry/exit conditions/details
+
+| Type | Entry Timings | Exit-Timings | Rate($) |
+| ---  | ---           | ---          | ---  | 
+| EarlyBird | 06:00-09:30 | 15:30-23:30 | 13:50 |
+| Night | 18:00-23:59 | 00:00-06:30 | 6:50 |
+| Weekend | 00:00-23:59 | 00:00-23:59 | 10:00/day |
+
+
+| Type | Duration [hr] | Rate($) |
+| ---  | ---           | ---     | 
+| Standard | 0-1 | 5:00 |
+| Standard | 1-2 | 10:00 |
+| Standard | 2-3 | 15:00 |
+| Standard | 3-24 | 20:00 |
+
+
 ### Support or Contact
 
 Having any trouble? Check out our [documentation](https://github.com/AJEETX/ParkingCalculation.Demo/blob/master/README.md) or [contact support](mailto:ajeetkumar@email.com) and we’ll help you sort it out.
 
->[![Downloads](https://img.shields.io/badge/downloads-500-blue.svg?style=plastic)](https://www.nuget.org/stats/packages/ParkingCalculation.Engine?groupby=Version)
+> **nuget** [![Downloads](https://img.shields.io/nuget/dt/ParkingCalculation.Engine.svg?style=plastic)](https://www.nuget.org/stats/packages/ParkingCalculation.Engine?groupby=Version)
 
 > [![HitCount](http://hits.dwyl.io/ajeetx/ParkingCalculation.Demo/projects/1.svg)](http://hits.dwyl.io/ajeetx/ParkingCalculation.Demo/projects/1)
+
