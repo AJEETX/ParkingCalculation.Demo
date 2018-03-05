@@ -1,9 +1,9 @@
 ## Welcome to ParkingCalculation Demo ![GitHub release](https://img.shields.io/github/release/ajeetx/ParkingCalculation.Demo.svg?style=for-the-badge)
 
 	
-| Release | Build | .Net Version | Dependency |
-| ---     | ---   | ---    | ---        |
-|[![Wrapper](https://img.shields.io/badge/ParkingCalculationDemo-stable-brightgreen.svg)](https://www.nuget.org/packages/ParkingCalculation.Engine/2.0.0) | [![Build Status](https://travis-ci.org/AJEETX/ParkingCalculation.Demo.png?branch=master&style=for-the-badge)](https://travis-ci.org/AJEETX/ParkingCalculation.Demo) | [![.Net Framework](https://img.shields.io/badge/DotNet-4.6.1-blue.svg?style=plastic)](https://www.microsoft.com/en-au/download/details.aspx?id=49981) | [![dependencies Status](https://img.shields.io/badge/dependency-none-brightgreen.svg?style=plastic)](https://img.shields.io/badge/dependency-none-brightgreen.svg) |
+| Release | Build | .Net Version | Dependency | Language | Repo Size  |
+| ---     | ---   | ---    | ---        | ---    | ---        |
+|![GitHub Release Date](https://img.shields.io/github/release-date/ajeetx/ParkingCalculation.Demo.svg?style=plastic) | [![Build Status](https://travis-ci.org/AJEETX/ParkingCalculation.Demo.png?branch=master&style=for-the-badge)](https://travis-ci.org/AJEETX/ParkingCalculation.Demo) | [![.Net Framework](https://img.shields.io/badge/DotNet-4.6.1-blue.svg?style=plastic)](https://www.microsoft.com/en-au/download/details.aspx?id=49981) | [![dependencies Status](https://img.shields.io/badge/dependency-none-brightgreen.svg?style=plastic)](https://img.shields.io/badge/dependency-none-brightgreen.svg) | ![GitHub top language](https://img.shields.io/github/languages/top/ajeetx/ParkingCalculation.Demo.svg) |![GitHub repo size in bytes](https://img.shields.io/github/repo-size/ajeetx/ParkingCalculation.Demo.svg)
 
 #### The application calculates the parking charge based on the below entry-exit times and the rates below
 
@@ -28,7 +28,10 @@
 
 Having any trouble? Check out our [documentation](https://github.com/AJEETX/ParkingCalculation.Demo/blob/master/README.md) or [contact support](mailto:ajeetkumar@email.com) and we’ll help you sort it out.
 
-> [![Downloads](https://img.shields.io/nuget/dt/ParkingCalculation.Engine.svg?style=plastic)](https://www.nuget.org/stats/packages/ParkingCalculation.Engine?groupby=Version)
+|  Counter   | Contributor | Disclaimer
+| ---        | ---         | --- |
+|[ ![HitCount](http://hits.dwyl.io/ajeetx/ParkingCalculation.Demo/projects/1.svg)](http://hits.dwyl.io/ajeetx/ParkingCalculation.Demo/projects/1) | ![GitHub contributors](https://img.shields.io/github/contributors/ajeetx/ParkingCalculation.Demo.svg?style=plastic)|![license](https://img.shields.io/github/license/ajeetx/ParkingCalculation.Demo.svg?style=plastic)
 
-> [![HitCount](http://hits.dwyl.io/ajeetx/ParkingCalculation.Demo/projects/1.svg)](http://hits.dwyl.io/ajeetx/ParkingCalculation.Demo/projects/1)
+
+
 
