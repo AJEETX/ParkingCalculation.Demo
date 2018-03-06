@@ -1,4 +1,4 @@
-## Parking Calculation Demo ![GitHub release](https://img.shields.io/github/release/ajeetx/ParkingCalculation.Demo.svg?style=for-the-badge)![Maintenance](https://img.shields.io/maintenance/yes/2018.svg?style=for-the-badge)
+## Parking Calculation Demo ![GitHub release](https://img.shields.io/github/release/ajeetx/ParkingCalculation.Demo.svg?style=for-the-badge) ![Maintenance](https://img.shields.io/maintenance/yes/2018.svg?style=for-the-badge)
 
 | ![GitHub Release Date](https://img.shields.io/github/release-date/ajeetx/ParkingCalculation.Demo.svg?style=plastic) | ![Website](https://img.shields.io/website-stable-offline-green-red/http/ajeetx.github.io/ParkingCalculation.Demo.svg?label=status&style=plastic)|[![Build Status](https://travis-ci.org/AJEETX/ParkingCalculation.Demo.png?branch=master&style=for-the-badge)](https://travis-ci.org/AJEETX/ParkingCalculation.Demo)
 |  --- | ---     | ---   |
